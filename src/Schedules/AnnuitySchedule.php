@@ -143,8 +143,8 @@ class AnnuitySchedule implements RepaymentSchedule
      */
     private function loanAmountCompute($monthIndex, Mortgage $mortgage) : AnnuitySchedule
     {
-        $this->mainDeptByMonth = $this->mainDept * $monthIndex;
-        $this->loanAmountInMonth = $this->loanAmount - $this->mainDeptByMonth;
+        $this->mainDeptByMonth = $this->mainDept;
+        $this->loanAmountInMonth -= $this->mainDeptByMonth;
         return $this;
     }
 
